@@ -2,30 +2,7 @@ import fetchMatches from '../../lib//fetch-matches';
 import Head from 'next/head'
 import matchScoreBoard from '../../lib/match-score-board';
 
-export async function getStaticPaths() {
-    const liveMatches = await fetchMatches('LIVE_MATCHES');
-    const recentMatches = await fetchMatches('RECENT_MATCHES');
-    const upcomingMatches = await fetchMatches('UPCOMING_MATCHES');
-
-    let matches = [...liveMatches.matches, ...recentMatches.matches, ...upcomingMatches.matches];
-
-    matches = matches.filter((match) => {
-        return match.matchUrl !== null
-    });
-
-    let data = matches.map((match) => ({
-        params: {
-            slug: [match.matchUrl.split('/')[2] + '~' + match.matchUrl.split('/')[3]],
-        },
-    }))
-
-    return {
-        paths: data,
-        fallback: false,
-    }
-}
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
     const slug = params.slug[0];
     const match_url = '/live-cricket-scores/' + slug.split('~')[0] + '/' +slug.split('~')[1];
     const match = await matchScoreBoard(match_url);

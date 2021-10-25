@@ -2,7 +2,7 @@ import Head from 'next/head'
 import fetchMatches from '../lib/fetch-matches'
 import format_slug from '../lib/utility';
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const liveMatches = await fetchMatches('LIVE_MATCHES');
   const recentMatches = await fetchMatches('RECENT_MATCHES');
   const upcomingMatches = await fetchMatches('UPCOMING_MATCHES');
