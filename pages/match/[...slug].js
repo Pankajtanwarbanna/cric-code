@@ -43,6 +43,22 @@ export default function Match({ match }) {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet" />
+        <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=UA-205481997-2`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-205481997-2', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
       </Head>
       <a href="/">
           <img src="https://user-images.githubusercontent.com/25531072/138609315-ce4e736b-a72e-4255-a135-95188d48c3a5.png" height="82" style={{ position:'fixed', top:'0' , left:'372px'}} />
@@ -65,6 +81,7 @@ export default function Match({ match }) {
             &lt;<span className="pink">meta </span> <span className="green">http-equiv</span>=<span className="yellow">"last-updated"</span> <span className="green">content</span>=<span className="yellow">"{ (new Date()).toISOString()}"</span>&gt;<br />
             &lt;<span className="pink">meta </span> <span className="green">name</span>=<span className="yellow">"descrption"</span> <span className="green">content</span>=<span className="yellow">"A fake VS code, that help you browse live cricket score, the way programmers like!"</span>&gt;<br />
             &lt;<span className="pink">meta </span> <span className="green">name</span>=<span className="yellow">"author"</span> <span className="green">data-title</span>=<span className="yellow">"Pankaj Tanwar"</span> <span className="green">content</span>=<span className="yellow">"<a contentEditable="false" href="https://www.pankajtanwar.in/" target="_blank">https://pankajtanwar.in/</a>"</span>&gt;<br />
+            &lt;<span className="pink">meta </span> <span className="green">name</span>=<span className="yellow">"keywords"</span> <span className="green">content</span>=<span className="yellow">"<a contentEditable="false" href="https://www.pankajtanwar.in/blogs" target="_blank">Pankaj's Blogs</a>, <a contentEditable="false" href="https://www.pankajtanwar.in/newsletter" target="_blank">Pankaj's Newsletter</a>, <a contentEditable="false" href="https://www.pankajtanwar.in/coding-diary" target="_blank">Pankaj's Coding Diary</a>"</span>&gt;<br />
             &lt;<span className="pink">meta </span> <span className="green">name</span>=<span className="yellow">"viewport"</span> <span className="green">content</span>=<span className="yellow">"width=device-width, initial-scale=1.0"</span>&gt;<br />
             &lt;<span className="pink">head</span>&gt;<br />
             <span className="grey">

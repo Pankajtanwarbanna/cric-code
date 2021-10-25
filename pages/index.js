@@ -61,10 +61,11 @@ export default function Home({ matches }) {
           <div id="page" suppressContentEditableWarning={true} contenteditable> 
             &lt;<span className="pink">!DOCTYPE</span> <span className="green">html</span>&gt;<br />
             &lt;<span className="pink">head</span>&gt;<br />
-            &lt;<span className="pink">title</span>&gt;CricCode : Live Cricket Score Board, the way programmers like.&lt;/<span className="pink">title</span>&gt;<br />
+            &lt;<span className="pink">title</span>&gt;CricCode : Live Cricket Score Board, exactly the way programmers like.&lt;/<span className="pink">title</span>&gt;<br />
             &lt;<span className="pink">meta </span> <span className="green">http-equiv</span>=<span className="yellow">"last-updated"</span> <span className="green">content</span>=<span className="yellow">"{ (new Date()).toISOString()}"</span>&gt;<br />
             &lt;<span className="pink">meta </span> <span className="green">name</span>=<span className="yellow">"descrption"</span> <span className="green">content</span>=<span className="yellow">"A fake VS code, that help you browse live cricket score, the way programmers like!"</span>&gt;<br />
             &lt;<span className="pink">meta </span> <span className="green">name</span>=<span className="yellow">"author"</span> <span className="green">data-title</span>=<span className="yellow">"Pankaj Tanwar"</span> <span className="green">content</span>=<span className="yellow">"<a contentEditable="false" href="https://www.pankajtanwar.in/" target="_blank">https://pankajtanwar.in/</a>"</span>&gt;<br />
+            &lt;<span className="pink">meta </span> <span className="green">name</span>=<span className="yellow">"keywords"</span> <span className="green">content</span>=<span className="yellow">"<a contentEditable="false" href="https://www.pankajtanwar.in/blogs" target="_blank">Pankaj's Blogs</a>, <a contentEditable="false" href="https://www.pankajtanwar.in/newsletter" target="_blank">Pankaj's Newsletter</a>, <a contentEditable="false" href="https://www.pankajtanwar.in/coding-diary" target="_blank">Pankaj's Coding Diary</a>"</span>&gt;<br />
             &lt;<span className="pink">meta </span> <span className="green">name</span>=<span className="yellow">"viewport"</span> <span className="green">content</span>=<span className="yellow">"width=device-width, initial-scale=1.0"</span>&gt;<br />
             <span className="grey">
             &lt;!--
