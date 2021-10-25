@@ -26,6 +26,22 @@ export default function Home({ matches }) {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet" />
+        <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=UA-205481997-2`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-205481997-2', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
       </Head>
       <a href="/">
           <img src="https://user-images.githubusercontent.com/25531072/138609315-ce4e736b-a72e-4255-a135-95188d48c3a5.png" height="82" style={{ position:'fixed', top:'0' , left:'372px'}} />
