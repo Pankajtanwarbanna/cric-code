@@ -80,7 +80,7 @@ export default function Match({ match }) {
             </span>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="pink">let</span><span className="lightblue"> striker_end_batsman </span> = { '{'}<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="pink">let</span><span className="lightblue"> name </span> = <span className="lightpurple">'{ match.batsman }'</span>;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="pink">let</span><span className="lightblue"> score </span> = <span className="lightpurple">'{ `${match.batsmanrun} (${match.ballsfaced})` }'</span>;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="pink">let</span><span className="lightblue"> score </span> = <span className="lightpurple">'{ `${match.batsmanrun}` }'</span>;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="pink">let</span><span className="lightblue"> fours </span> = <span className="lightpurple">'{ match.fours }'</span>;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="pink">let</span><span className="lightblue"> sixes </span> = <span className="lightpurple">'{ match.sixes }'</span>;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{'}'}<br /><br />

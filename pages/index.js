@@ -100,7 +100,7 @@ export default function Home({ matches }) {
             <br />
             <span className="grey">
             &lt;!--
-            Built with ❤️ by <a contentEditable="false" href="https://www.pankajtanwar.in/">Pankaj Tanwar</a>. Reach out to him at <a contentEditable="false" href="https://twitter.com/the2ndfloorguy">twitter!</a>. Inspiriation and some of the images from <a contentEditable="false" href="https://news.ycombinator.com/item?id=28472170" target="_blank">this HN post.</a>
+            Built with ❤️ by <a contentEditable="false" href="https://www.pankajtanwar.in/">Pankaj Tanwar</a>. Reach out to him at <a contentEditable="false" href="https://twitter.com/the2ndfloorguy">twitter!</a>. Inspiration and images from <a contentEditable="false" href="https://news.ycombinator.com/item?id=28472170" target="_blank">this HN post.</a> [<b>Edit</b> : The majority of HTML and CSS belongs to the  <a contentEditable="false" href="https://twitter.com/levelsio" target="_blank">original creator (@levelsio)</a>, I took <a contentEditable="false" href="https://remoteok.io/vscode" target="_blank">VSCode for Remote OK</a> and modifed it for realtime live cricket score.]
             --&gt;<br />
             </span>
             <br />
