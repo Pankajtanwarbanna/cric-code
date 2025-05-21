@@ -4,16 +4,16 @@ import format_slug from '../lib/utility';
 
 export async function getServerSideProps() {
   const liveMatches = await fetchMatches('LIVE_MATCHES');
-  // const recentMatches = await fetchMatches('RECENT_MATCHES');
-  // const upcomingMatches = await fetchMatches('UPCOMING_MATCHES');
+  const recentMatches = await fetchMatches('RECENT_MATCHES');
+  const upcomingMatches = await fetchMatches('UPCOMING_MATCHES');
 
-  // let matches = [...liveMatches.matches, ...recentMatches.matches, ...upcomingMatches.matches];
+  const matches = [...liveMatches.matches, ...recentMatches.matches, ...upcomingMatches.matches];
 
-  const matches = liveMatches.matches.filter((match) => {
+  const result = matches.filter((match) => {
     return match.matchUrl != null;
   });
 
-  return { props: { matches } };
+  return { props: { matches: result } };
 }
 
 export default function Home({ matches }) {
@@ -24,7 +24,7 @@ export default function Home({ matches }) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=0.1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet" />
         <script
           async
@@ -65,7 +65,8 @@ export default function Home({ matches }) {
           &lt;<span className="pink">meta </span> <span className="green">http-equiv</span>=<span className="yellow">"last-updated"</span> <span className="green">content</span>=<span className="yellow">"{(new Date()).toISOString()}"</span>&gt;<br />
           &lt;<span className="pink">meta </span> <span className="green">name</span>=<span className="yellow">"descrption"</span> <span className="green">content</span>=<span className="yellow">"A fake VS code, that help you browse live cricket score, the way programmers like!"</span>&gt;<br />
           &lt;<span className="pink">meta </span> <span className="green">name</span>=<span className="yellow">"author"</span> <span className="green">data-title</span>=<span className="yellow">"Pankaj Tanwar"</span> <span className="green">content</span>=<span className="yellow">"<a href="https://www.pankajtanwar.in/" target="_blank">https://pankajtanwar.in/</a>"</span>&gt;<br />
-          &lt;<span className="pink">meta </span> <span className="green">name</span>=<span className="yellow">"keywords"</span> <span className="green">content</span>=<span className="yellow">"<a href="https://www.pankajtanwar.in/blogs" target="_blank">Pankaj's Blogs</a>, <a href="https://www.pankajtanwar.in/newsletter" target="_blank">Pankaj's Newsletter</a>, <a href="https://www.pankajtanwar.in/coding-diary" target="_blank">Pankaj's Coding Diary</a>"</span>&gt;<br />
+          &lt;<span className="pink">meta </span> <span className="green">name</span>=<span className="yellow">"twitter:creator"</span> <span className="green">data-title</span>=<span className="yellow">"Pankaj Tanwar"</span> <span className="green">content</span>=<span className="yellow">"<a href="https://x.com/the2ndfloorguy" target="_blank">https://x.com/the2ndfloorguy/</a>"</span>&gt;<br />
+          &lt;<span className="pink">meta </span> <span className="green">name</span>=<span className="yellow">"keywords"</span> <span className="green">content</span>=<span className="yellow">"<a href="https://www.pankajtanwar.in/blogs" target="_blank">Pankaj's Blogs</a>, <a href="https://www.pankajtanwar.in/side-hustles" target="_blank">Pankaj's Side Hustles</a>"</span>&gt;<br />
           &lt;<span className="pink">meta </span> <span className="green">name</span>=<span className="yellow">"viewport"</span> <span className="green">content</span>=<span className="yellow">"width=device-width, initial-scale=1.0"</span>&gt;<br />
           <span className="grey">
             &lt;!--
@@ -76,7 +77,7 @@ export default function Home({ matches }) {
           {
             matches.map((match) => (
               <div>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span className="grey">&lt;!-- {match.match_category} --&gt;<br /></span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span className="grey">&lt;!-- {match.matchType} --&gt;<br /></span>
                 &nbsp;&nbsp;&nbsp;&nbsp;<span className="pink">div</span>[<span className="green">id</span><span className="pink">=</span><span className="yellow">"{`${match.matchType.toLowerCase()}-match`}"</span> <span className="green">title</span><span className="pink">=</span><span className="yellow">"{match.title}"</span>]
                 {' {'}<br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="lightblue">score-board</span>: <span className="lightpurple">'{match.updates[0]}'</span><br />
